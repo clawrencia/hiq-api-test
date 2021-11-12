@@ -8,7 +8,7 @@ pdl_apikey = os.environ['PDL_APIKEY']
 
 
 def lambda_handler(event, context):
-
+    print(event)
     if event['resource'] == "/search-people-pdl":
         search_param = json.loads(event['body'])
         api_key = pdl_apikey
